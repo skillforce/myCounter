@@ -1,0 +1,21 @@
+.tablet {
+    text-align: center;
+    padding: 55px;
+    background-color: #61dafb;
+    color: darkslateblue;
+    margin: 5px 5px 10px 5px;
+    border-radius: 10px;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.tabletTop {
+    text-align: center;
+    padding: 55px;
+    background-color: #61dafb;
+    color: red;
+    margin: 5px 5px 10px 5px;
+    border-radius: 10px;
+    font-size: 45px;
+    font-weight: 600;
+}
