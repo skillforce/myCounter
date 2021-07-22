@@ -9,27 +9,33 @@
     font-weight: 600;
 }
 
-/*.tabletTop {*/
-/*    text-align: center;*/
-/*    padding: 55px;*/
-/*    background-color: #61dafb;*/
-/*    color: red;*/
-/*    margin: 5px 5px 10px 5px;*/
-/*    border-radius: 10px;*/
-/*    font-size: 45px;*/
-/*    font-weight: 600;*/
-/*}*/
 
 
-.maxValueCl input{
-margin-left: 35px;
-    width:70px;
+.maxValueCl input {
+    margin-left: 35px;
+    width: 70px;
     height: 35px;
 }
 
-.startValue input{
+.startValueCl input {
     margin-left: 27px;
-    width:70px;
+    width: 70px;
     height: 35px;
+
+
+}
+
+.maxValueClError input {
+    border: 2px solid red;
+    margin-left: 35px;
+    width: 70px;
+    height: 35px;
+}
+
+.startValueClError input {
+    margin-left: 27px;
+    width: 70px;
+    height: 35px;
+    border: 2px solid red;
 
 }

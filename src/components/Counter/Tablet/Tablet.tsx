@@ -5,16 +5,14 @@ const {tablet, tabletTop} = s;
 
 type TabletPropsType = {
     countValue: number
-    maxValue:number
+    maxValue: number
 }
 
 
 export const Tablet = (pr: TabletPropsType) => {
     const {countValue, maxValue} = pr;
-
-    const tabletClass = countValue < maxValue ? tablet : tabletTop
     return (
-        <div className={tabletClass}>
+        <div className={+countValue < maxValue ? tablet : tabletTop}>
             {countValue}
         </div>
     )
