@@ -1,62 +1,73 @@
-.resetBtn button{
+.resetBtn button {
     font-weight: 900;
     font-size: 15px;
     padding: 5px 15px;
     border-radius: 15px;
     background-color: #61dafb;
-    color:darkslateblue;
+    color: darkslateblue;
 }
 
-.resetBtn button:hover{
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.25), 10px 10px 10px rgba(0,0,0,0.22);
+.resetBtn button:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25), 10px 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.resetBtnOff button{
+.resetBtnOff button {
     font-weight: 900;
     font-size: 15px;
     padding: 5px 15px;
     border-radius: 15px;
     background-color: #61dafb;
-    color:darkslateblue;
+    color: darkslateblue;
     opacity: 80%;
 }
-.setBtn button{
+
+.setBtn button {
     font-weight: 900;
     font-size: 15px;
     padding: 5px 20px;
     border-radius: 15px;
     background-color: #61dafb;
-    color:darkslateblue;
+    color: darkslateblue;
 }
 
-
-.incBtn{
-    margin-right: 25px;
-}
-
-.incBtn button{
+.setBtnOffCl button {
     font-weight: 900;
     font-size: 15px;
     padding: 5px 15px;
     border-radius: 15px;
     background-color: #61dafb;
-    color:darkslateblue;
+    color: darkslateblue;
+    opacity: 80%;
 }
 
-.incBtn button:hover{
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.25), 10px 10px 10px rgba(0,0,0,0.22);
-}
 
-.incBtnOff{
+.incBtn {
     margin-right: 25px;
 }
 
-.incBtnOff button{
+.incBtn button {
     font-weight: 900;
     font-size: 15px;
     padding: 5px 15px;
     border-radius: 15px;
     background-color: #61dafb;
-    color:darkslateblue;
+    color: darkslateblue;
+}
+
+.incBtn button:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25), 10px 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.incBtnOff {
+    margin-right: 25px;
+}
+
+.incBtnOff button {
+    font-weight: 900;
+    font-size: 15px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: #61dafb;
+    color: darkslateblue;
     opacity: 70%;
 }

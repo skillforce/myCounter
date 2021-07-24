@@ -10,9 +10,9 @@ type CounterPropsType = {
     btnOnOf: boolean
     setBtnOnOf: Dispatch<SetStateAction<boolean>>
     inStartValue: number
-    setInStartValue: (newX: any) => void
+    setInStartValue: (newX: number) => void
     inMaxValue: number
-    setInMaxValue: (newX: any) => void
+    setInMaxValue: (newX: number) => void
     countValue: number
     updateCountValue: () => void
     setStartValue: Dispatch<SetStateAction<number>>
@@ -36,16 +36,32 @@ export const Counter = (pr: CounterPropsType) => {
 
     return (<div className={counterFlex}>
             <div className={counter}>
-                <Tablet maxValue={maxValue} countValue={countValue}/>
+                <Tablet inStartValue={inStartValue}
+                        btnOnOf={btnOnOf}
+                        maxValue={maxValue}
+                        countValue={countValue}
+                        inMaxValue={inMaxValue}/>
                 <div className={btn}>
-                    <Btn inMaxValue={inMaxValue} maxValue={maxValue} countValue={countValue} typeBtn={'inc'}
-                         updateCountValue={updateCountValue}/>
-                    <Btn inMaxValue={inMaxValue} countValue={countValue} typeBtn={'reset'} resetCountValue={resetCountValue}/>
+                    <Btn
+                        btnOnOf={btnOnOf}
+                        inStartValue={inStartValue}
+                        inMaxValue={inMaxValue}
+                        maxValue={maxValue}
+                        countValue={countValue}
+                        typeBtn={'inc'}
+                        updateCountValue={updateCountValue}/>
+                    <Btn btnOnOf={btnOnOf}
+                         inStartValue={inStartValue}
+                         inMaxValue={inMaxValue}
+                         countValue={countValue}
+                         typeBtn={'reset'}
+                         resetCountValue={resetCountValue}
+                         startValue={startValue}/>
                 </div>
             </div>
             <div className={counter}>
                 <SetTablet setBtnOnOf={setBtnOnOf}
-                    setInStartValue={setInStartValue}
+                           setInStartValue={setInStartValue}
                            setInMaxValue={setInMaxValue}
                            inMaxValue={inMaxValue}
                            inStartValue={inStartValue}/>

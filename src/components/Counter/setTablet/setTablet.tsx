@@ -18,10 +18,10 @@ export const SetTablet = (pr: TabletPropsType) => {
         setInMaxValue, inMaxValue, setBtnOnOf
     } = pr;
 
-
+    const start_max_value = inStartValue < inMaxValue;
     const onChangeInMaxValue: ChangeEventHandler<HTMLInputElement> = (e) => {
         if (e.currentTarget.value) {
-            console.log('max value change')
+
             setInMaxValue(+e.currentTarget.value);
         } else {
             setInMaxValue('');
@@ -39,14 +39,14 @@ export const SetTablet = (pr: TabletPropsType) => {
         setBtnOnOf(false);
     }
 
-    const MaxValueInputClass = inMaxValue ? maxValueCl : maxValueClError;
-    const StartValueInputClass = inStartValue > -1 ? startValueCl : startValueClError;
+    const MaxValueInputClass = inMaxValue && start_max_value ? maxValueCl : maxValueClError;
+    const StartValueInputClass = inStartValue > -1 && start_max_value ? startValueCl : startValueClError;
 
     return (
         <div className={setTablet}>
-            <div className={MaxValueInputClass}>max value: <input type="text" value={inMaxValue}
+            <div className={MaxValueInputClass}>max value: <input type="number" value={inMaxValue}
                                                                   onChange={onChangeInMaxValue}/></div>
-            <div className={StartValueInputClass}>start value: <input type="text" value={inStartValue}
+            <div className={StartValueInputClass}>start value: <input type="number" value={inStartValue}
                                                                       onChange={onChangeInStartValue}/></div>
         </div>
     )
