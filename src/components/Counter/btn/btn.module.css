@@ -16,9 +16,9 @@
     font-size: 15px;
     padding: 5px 15px;
     border-radius: 15px;
-    background-color: #61dafb;
+    background-color: darkgrey;
     color: darkslateblue;
-    opacity: 80%;
+
 }
 
 .setBtn button {
@@ -35,9 +35,8 @@
     font-size: 15px;
     padding: 5px 15px;
     border-radius: 15px;
-    background-color: #61dafb;
+    background-color: darkgrey;
     color: darkslateblue;
-    opacity: 80%;
 }
 
 
@@ -67,7 +66,6 @@
     font-size: 15px;
     padding: 5px 15px;
     border-radius: 15px;
-    background-color: #61dafb;
+    background-color: darkgrey;
     color: darkslateblue;
-    opacity: 70%;
 }
