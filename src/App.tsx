@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {Counter} from './components/Counter/Counter';
 
@@ -14,16 +14,49 @@ const App = () => {
 
     let [btnOnOf, setBtnOnOf] = useState<boolean>(true);
 
+    const inStartValueLS = () => {
+        let inStartValue = localStorage.getItem('InStartValue')
+        if (inStartValue) {
+            let newInStart = JSON.parse(inStartValue);
+            setInStartValue(newInStart);
+        }
+    }
+    const inMaxValueLS = () => {
+        let inMaxValue = localStorage.getItem('InMaxValue')
+        if (inMaxValue) {
+            let newInMax = JSON.parse(inMaxValue);
+            setInMaxValue(newInMax);
+        }
+    }
+    const countValueLS = () => {
+        let countValue = localStorage.getItem('countValue')
+        if (countValue) {
+            let newCountValue = JSON.parse(countValue);
+            setCountValue(newCountValue);
+        }
+    }
+
+
+    useEffect(() => {
+        inStartValueLS()
+        inMaxValueLS()
+        countValueLS()
+
+    }, [])
+
+
     const updateCountValue = () => {
         if (countValue < inMaxValue) {
             let newNum = ++countValue;
             setCountValue(newNum)
+            localStorage.setItem('countValue', JSON.stringify(newNum));
         }
     }
 
     const resetCountValue = () => {
         setCountValue(inStartValue);
         setMaxValue(inMaxValue);
+        localStorage.setItem('countValue', JSON.stringify(inStartValue))
     }
 
 

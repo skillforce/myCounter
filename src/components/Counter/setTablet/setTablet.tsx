@@ -31,7 +31,6 @@ export const SetTablet = (pr: TabletPropsType) => {
 
     const onChangeInStartValue: ChangeEventHandler<HTMLInputElement> = (e) => {
         if (e.currentTarget.value) {
-            console.log('start value change')
             setInStartValue(e.currentTarget.value);
         } else {
             setInStartValue('');

@@ -49,6 +49,8 @@ export const Btn = (pr: BtnPropsType) => {
     const onClickSet = () => {
         if (resetCountValue) {
             resetCountValue()
+            localStorage.setItem('InStartValue', JSON.stringify(inStartValue));
+            localStorage.setItem('InMaxValue', JSON.stringify(inMaxValue));
         }
         if (setBtnOnOf) {
             setBtnOnOf(true);

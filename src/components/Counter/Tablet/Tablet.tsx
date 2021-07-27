@@ -16,6 +16,7 @@ export const Tablet = (pr: TabletPropsType) => {
     const {countValue, maxValue, btnOnOf, inStartValue, inMaxValue} = pr;
 
 
+
     const StartValueCheck = inStartValue >= 0 ?
         <div>
             {btnOnOf && countValue}
@@ -24,15 +25,27 @@ export const Tablet = (pr: TabletPropsType) => {
         :
         <div className={setMsg}>Start value must be 0(zero) or greater</div>;
 
+
     const start_max_check = inStartValue < inMaxValue ?
         StartValueCheck
         :
         <div className={setMsg}>Max value must be greater than Start Value</div>
 
 
+    const inMaxValueCheck =  countValue <= inMaxValue ?
+        start_max_check
+        :
+        <div className={setMsg}>Please type reset!</div>
+
+    const finallyCheck = countValue >= inStartValue ?
+        inMaxValueCheck
+        :
+        <div className={setMsg}>Please type set!</div>
+
+
     return (
-        <div className={+countValue < maxValue ? tablet : tabletTop}>
-            {start_max_check}
+        <div className={+countValue < inMaxValue ? tablet : tabletTop}>
+            {finallyCheck}
         </div>
     )
 }
