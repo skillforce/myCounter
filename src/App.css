@@ -1,5 +1,16 @@
 body {
-  background-color: darkslateblue;
-  text-align: center;
+    background-color: darkslateblue;
+    text-align: center;
+}
+
+.BtnToChangeRoute {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.BtnToChangeRoute button {
+    margin-right: 20px;
 }
 
