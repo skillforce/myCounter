@@ -96,7 +96,7 @@ const App = () => {
 
     const updateCountValue = () => {
         if (countValue < inMaxValue) {
-            let newNum = ++countValue;
+            let newNum = +countValue + 1;
             setCountValue(newNum)
             localStorage.setItem('countValue', JSON.stringify(newNum));
         }
@@ -104,7 +104,7 @@ const App = () => {
 
     const updateCountValueN = () => {
         if (countValueN < inMaxValueN) {
-            let newNum = ++countValueN;
+            let newNum = +countValueN + 1;
             setCountValueN(newNum)
             localStorage.setItem('countValueN', JSON.stringify(newNum));
         }

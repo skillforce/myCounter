@@ -40,7 +40,7 @@ export const Tablet = (pr: TabletPropsType) => {
     const finallyCheck = countValue >= inStartValue ?
         inMaxValueCheck
         :
-        <div className={setMsg}>Please type set!</div>
+        <div className={setMsg}>Press 'set' to programm counter</div>
 
 
     return (
